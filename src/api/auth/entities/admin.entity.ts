@@ -1,7 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 
-
 @Entity('admin')
 export class AdminEntity {
   @PrimaryGeneratedColumn()
@@ -18,6 +17,9 @@ export class AdminEntity {
 
   @Column()
   nama?: string;
+
+  @Column()
+  role?: string;
 
   @Column({ type: 'datetime' })
   created_at: Date;

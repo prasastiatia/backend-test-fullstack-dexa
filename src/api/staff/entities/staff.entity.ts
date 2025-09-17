@@ -21,6 +21,9 @@ export class StaffDataEntity {
   @Column()
   nama?: string;
 
+  @Column()
+  role?: string;
+
   @Column({ type: 'datetime' })
   tanggal_update: Date;
 

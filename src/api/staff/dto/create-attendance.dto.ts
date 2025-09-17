@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsEnum, IsDate, IsOptional } from 'class-validator';
+import { IsNotEmpty, IsEnum, IsDate, IsOptional, IsInt } from 'class-validator';
 
 export enum StatusAbsensi {
   MASUK = 'masuk',
@@ -11,6 +11,9 @@ export class CreateAbsensiDto {
 
   @IsOptional()
   @IsDate()
-  @IsNotEmpty()
   tanggal?: Date;
+
+  @IsOptional()
+  @IsInt()
+  id_karyawan?: number;
 }

@@ -1,7 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 
-
 @Entity('karyawan')
 export class StaffEntity {
   @PrimaryGeneratedColumn()
@@ -18,6 +17,9 @@ export class StaffEntity {
 
   @Column()
   nama?: string;
+
+  @Column()
+  role?: string;
 
   @Column({ type: 'datetime' })
   tanggal_update: Date;
